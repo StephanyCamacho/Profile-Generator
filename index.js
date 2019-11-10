@@ -18,19 +18,21 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
+//create index.html file using fs
 
 }
 
 function init() {
     inquirer
         .prompt(questions)
-        .then(function ({ github, color })){
+        .then(function ({ github, color }){
         const queryUrl = `https://api.github.com/users/${username}`;
 
         axios
         .get(queryUrl)
-        .then((response)) => {
+        .then((response) => {
             console.log(response.data)
-        }
-    } }
+        });
+    } )
+}
     init();
