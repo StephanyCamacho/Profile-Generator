@@ -172,22 +172,20 @@ function generateHTML(data) {
            }
         </style>
       </head>
-      
+
       <body>
       <header>
       <div class="wrapper">
-      <div class="photo-header">
-      <img src="${data.portPic}"><br>
-      <h1>Hi!</h1>
-      <h2>My name is ${data.name}</h2>
-      <h3>Currently @ ${data.company}</h3>
-      <div class="links-nav">
-      <div class="links-nav">
-      <a class="nav-link" href="https://www.google.com/maps/place/${data.location.split(' ')[0]}+${data.location.split(' ')[1]}">${data.location}</a>
-      <a class="nav-link" href="https://github.com/${data.username}">github</a>
-      <a class="nav-link" href="${data.blog}">blog</a>
-      </div>
-      </div>
+        <div class="photo-header">
+          <img src="${data.portPic}"><br>
+          <h1>Hi!</h1>
+          <h2>My name is ${data.name}</h2>
+          <h3>Currently @ ${data.company}</h3>
+      <nav class="links-nav">
+        <a class="nav-link" href="https://www.google.com/maps/place/${data.location.split(' ')[0]}+${data.location.split(' ')[1]}">${data.location}</a>
+        <a class="nav-link" href="https://github.com/${data.username}">github</a>
+        <a class="nav-link" href="${data.blog}">blog</a>
+      </nav>
       </header>
 
       <div class="container">
@@ -225,3 +223,4 @@ function generateHTML(data) {
       </body>
       </html>`
 };
+module.exports = {generateHTML};
